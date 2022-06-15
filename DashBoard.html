@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" lang="pt-BR">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="./dados.js"></script>
+    <script type="text/javascript" src="./zingchart.min.js" defer></script>
+    <script type="text/javascript" src="./zingchart-treemap.min.js" defer></script>
+    <script type="text/javascript" src="./index.js" defer></script>
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navegacao">
+        </nav>
+        <main>
+            <header class="header-main">
+                <h1>Olá, Diego Schinemann</h1>
+                <p>Aqui esta um resumo das suas Ocorrências</p>
+            </header>
+            <hr />
+            <div class="boxes">
+                <section>
+                    <h1>Total de Ocorrências</h1>
+                    <div>
+                        <div class="details">
+                            <div><span>Ocorrências</span></div>
+                            <div><span>145</span></div>
+                        </div>
+                        <div class="details">
+                            <div><span>Custo Total</span></div>
+                            <div><span>R$ 1.500,00</span></div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h1>Planos criados</h1>
+                    <div>
+                        <div class="details">
+                            <div><span>Planos</span></div>
+                            <div><span>1</span></div>
+                        </div>
+                        <div class="details">
+                            <div><span>Encerrados</span></div>
+                            <div><span>1</span></div>
+                        </div>
+                        <div class="details">
+                            <div><span>Custo Total</span></div>
+                            <div><span>R$ 1.500,00</span></div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h1>Ações criadas</h1>
+                    <div>
+                        <div class="details">
+                            <div><span>Total</span></div>
+                            <div><span>15</span></div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h1>DeadLine</h1>
+                    <div>
+                        <div class="details">
+                            <div><span>Falta de mercadoria</span></div>
+                            <div><span>Prazo 15/07/2022</span></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <hr />
+            <div>
+                <div>
+                    <label for="options">Mostrar como:</label>
+                    <select name="options" id="options">
+                        <option value="Tp_Ocorrencia" selected>Tipo de Ocorrência</option>
+                        <option value="Harmed">Prejudicado</option>
+                        <option value="Origin">Origem</option>
+                        <option value="Status">Status</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="optionsCost">Mostrar como:</label>
+                    <select name="optionsCost" id="optionsCost">
+                        <option value="Count">Contagem de registros</option>
+                        <option value="Somar" selected>Soma de Custo</option>
+                    </select>
+                </div>
+            </div>
+            <hr />
+            <div class="charts">
+                <section style="grid-area: a">
+                    <div id='myChart'></div>
+                </section>
+                <section style="grid-area: b">
+                    <div id='myChart2'></div>
+                </section>
+                <section style="grid-area: d">
+                    <div>
+                        <div>
+                            <label for="options-date">Mostrar como:</label>
+                            <select name="options-date" id="options-date">
+                                <option value="DateOccurrence">Por data da Ocorrência</option>
+                                <option value="CreatedAt">Por data cadastro</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="optionsSumMonth">Mostrar como:</label>
+                            <select name="optionsSumMonth" id="optionsSumMonth">
+                                <option value="Count">Contagem de registros</option>
+                                <option value="Somar" selected>Soma de Custo</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id='myChart3'></div>
+                </section>
+                <section style="grid-area: c">
+                    <div id='myChart5'>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
